@@ -4,10 +4,34 @@ require 'header.php';
 if(isset($_SESSION['usuario']))
 {
 date_default_timezone_set("America/Lima");
-
+//ebeef1 gris
 ?>
+<style>
+    body {
+        background-image: url("../assets/images/Fondo.JPG");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    
+</style>
 
+<!-- Resto del contenido de la página -->
 
+<style>
+                            .imgroder{
+                               border-radius: 15px;
+                            }
+                            .card-redonder{
+                                border-radius:15px ;
+                                width: 100%;
+                                height: 100%;
+                                
+                            }
+                            .gris{
+                                background-color: #ebeef1;
+                            }
+                        </style>
 
     <div class="content-page">
 	
@@ -17,20 +41,25 @@ date_default_timezone_set("America/Lima");
         <div class="container-fluid">
                 
                     <div class="row">
-                                <div class="col-xl-12">
+                                <div style="margin-bottom: 10px;" class="col-xl-12">
                                         <div class="breadcrumb-holder">
-                                                <h1 class="main-title float-left"><?php echo $_SESSION['datos']->tipo ?></h1>
-                                                <div class="clearfix"></div>
+                                                <h1  class="main-title float-left"><span><img class="imgroder"  src="../assets/images/villa.JPG
+            " alt="logo"></span></h1>
+                                               
                                         </div>
                                 </div>
                     </div>
                     <!-- end row -->
-
+                        <style>
+                            .card-box noradius noborder bg-purple{
+                                background-color: #ffcc27;
+                            }
+                        </style>
                     
                         <div class="row">
                             
-                                <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
-                                        <div class="card-box noradius noborder bg-purple">
+                                <div class=" col-xs-12 col-md-6 col-lg-6 col-xl-3">
+                                        <div class=" card-redonder card-box noradius noborder bg-purple">
                                                 <i class="fa fa-money float-right text-white"></i>
                                                 <h5 class="text-white text-uppercase m-b-20">Dinero del Dia en Efectivo</h5>
                                                 <h4 class="m-b-20 text-white counter">$
@@ -54,9 +83,9 @@ date_default_timezone_set("America/Lima");
                                         </div>
                                 </div>
                                 <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
-                                        <div class="card-box noradius noborder bg-purple">
-                                                <i class="fa fa-money float-right text-white"></i>
-                                                <h5 class="text-white text-uppercase m-b-20">Dinero del Dia en Banco</h5>
+                                        <div class="card-redonder card-box noradius noborder bg-purple">
+                                                <i  class="fas fa-cash-register float-right text-white"></i>
+                                                <h7 class="text-white text-uppercase m-b-19">Dinero en Transferencias</h7>
                                                 <h4 class="m-b-20 text-white counter">$
                                                                     <?php
                                                                         require_once '../clases/Reporte.php';
@@ -78,7 +107,7 @@ date_default_timezone_set("America/Lima");
                                         </div>
                                 </div>
                                 <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
-                                        <div class="card-box noradius noborder bg-default">
+                                        <div  class="card-redonder card-box noradius noborder bg-Red">
                                                 <i class="fa fa-shopping-cart  float-right text-white"></i>
                                                 <h5 class="text-white text-uppercase m-b-20">Ventas del Dia</h5>
                                                 <h4 class="m-b-20 text-white counter">
@@ -94,7 +123,7 @@ date_default_timezone_set("America/Lima");
                                         </div>
                                 </div>                                                
                                 <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
-                                        <div class="card-box noradius noborder bg-info">
+                                        <div class="card-redonder card-box noradius noborder bg-Red">
                                                 <i class="fa fa-product-hunt  float-right text-white"></i>
                                                 <h5 class="text-white text-uppercase m-b-20">Productos Vendidos</h5>
                                                 <h4 class="m-b-20 text-white counter">
@@ -117,8 +146,8 @@ date_default_timezone_set("America/Lima");
                                         </div>
                                 </div>
 
-                                <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
-                                        <div class="card-box noradius noborder bg-dark">
+                                <div style="margin-top: 30px; margin-bottom: 10px;" class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
+                                        <div class="card-redonder card-box noradius noborder bg-dark">
                                                 <i class="fa fa-bell-o float-right text-white"></i>
                                                 <h5 class="text-white text-uppercase m-b-20">Stock<br> Bajo</h5>
                                                 <h4 class="m-b-20 text-white counter">
@@ -133,8 +162,8 @@ date_default_timezone_set("America/Lima");
                                                 <span class="text-white"><br></span>
                                         </div>
                                 </div>
-                                <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
-                                        <div class="card-box noradius noborder bg-Red">
+                                <div style="margin-top: 30px; margin-bottom: 10px;" class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
+                                        <div class="card-redonder card-box noradius noborder bg-Red">
                                                 <i class="fa fa-money float-right text-white"></i>
                                                 <h5 class="text-white text-uppercase m-b-20">Dinero del Dia</h5>
                                                 <h4 class="m-b-20 text-white counter">$
@@ -175,7 +204,7 @@ date_default_timezone_set("America/Lima");
                             <!--<td>Fecha Sepelio</td>-->
                             <td>Despacho</td>
                             <td>Stock Minimo</td>
-                            <td style="width:15px"></td>
+                           
                         </tr>
                     </thead>
                     <tbody>

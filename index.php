@@ -21,14 +21,33 @@
     <script type="text/javascript" src="assets/alertifyjs/alertify.js"></script>
     
 </head>
+<style>
+    .card-body {
+       background-color: red;
+       border-radius: 15px;
+    }
+    .form-label-group{
+      border-radius: 10px;
+    }
     
+</style>
+<style>
+    body {
+        background-image: url("./assets/images/Fondo.JPG");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    
+</style>
 <body>
+ 
   <div class="container">
     <div class="row">
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto"><br><br><br><br>
         <div class="card card-signin my-5">
           <div class="card-body">
-            <h5 class="card-title text-center"><strong>Software Venta</strong></h5>
+            <h5 class="card-title text-center"><img width="50%" src="assets/images/Villa.JPG" alt="logos"></h5>
             <form class="form-signin" id="frmlogin">
               <div class="form-label-group">
                 <input type="text" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email address" required autofocus>
@@ -40,14 +59,14 @@
                 <label for="inputPassword">Clave</label>
               </div>
               <div class="form-label-group">
-                <select name="inputTipo" id="inputTipo" class="form-control" required>
-                <option value="admin">Admin</option>
+                <select  style = "border-radius : 20px; height: 45px; "  name="inputTipo" id="inputTipo" class="form-control" required>
+                <option   value="admin">Admin</option>
                 <option value="Vendedor">Vendedor</option>
                 </select>
               </div>
 
               
-              <span class="btn btn-lg btn-success btn-block text-uppercase" id="btningresar" type="submit">Ingresar</span><br>
+              <span class="btn btn-lg btn-warning btn-block text-uppercase" id="btningresar" type="submit">Ingresar</span><br>
               <div class="custom-control custom-checkbox mb-3">
                
               </div>
@@ -88,7 +107,7 @@
                             window.location = "vistas/inicio.php";
                         }
                     else if(r==0){
-                            alertify.error("Error al ingresar los datos");
+                            alertify.error("Error en los datos ingresados, intente nuevamente");
                         }
                     else
                         {

@@ -8,13 +8,15 @@ if($_SESSION['tipo'] == "admin")
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<<script src="https://kit.fontawesome.com/7c36b9621b.js" crossorigin="anonymous"></script>
+
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 		<title>Ventas</title>
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="../assets/images/res.ico">
+		<link rel="shortcut icon" href="../assets/images/avatars/res.png">
 
 		<!-- Bootstrap CSS -->
         <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -47,7 +49,8 @@ if($_SESSION['tipo'] == "admin")
 
 		<!-- LOGO -->
         <div class="headerbar-left">
-			<a href="inicio.php" class="logo"><img alt="Logo" src="../assets/images/res.png" /> <span>Admin</span></a>
+			<a href="inicio.php" class="logo"><img src="../assets/images/dog.png" alt="logo"><span><img src="../assets/images/villa.JPG
+            " alt="logo"></span></a>
         </div>
 
         <nav class="navbar-custom">
@@ -82,12 +85,12 @@ if($_SESSION['tipo'] == "admin")
 
                         <li class="list-inline-item dropdown notif">
                             <a class="nav-link dropdown-toggle nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="../assets/images/avatars/res.png" alt="Profile image" class="avatar-rounded">
+                                <img src="../assets/images/avatars/dog.png" alt="Profile image" class="avatar-rounded">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                                 <!-- item-->
-                                <div class="dropdown-item noti-title">
-                                    <h5 class="text-overflow"><small>Hola, <?php echo $_SESSION['usuario'] ?></small> </h5>
+                                <div style="background-color: #f3bd1b;" class="dropdown-item noti-title">
+                                    <h5  class="text-overflow"><small>Hola, <?php echo $_SESSION['usuario'] ?></small> </h5>
                                 </div>
 
                                 <!-- item-->
@@ -132,15 +135,14 @@ if($_SESSION['tipo'] == "admin")
 			<ul>
 
 					<li class="submenu">
-						<a class="active" href="inicio.php"><i class="fa fa-fw fa-bars"></i><span> Menú </span> </a>
+						<a style="background-color: #f3bd1b;" class="active" href="inicio.php"><i style="color:black" class="fa fa-fw fa-bars"></i><span style="color:black"> Menú </span> </a>
                     </li>
 
 					<li class="submenu">
-                        <a href="#"><i class="fa fa-fw fa-table"></i> <span> Inventario </span> <span class="menu-arrow"></span></a>
+                        <a href="#"><i class="fas fa-hamburger"></i> <span> Inventario </span> <span class="menu-arrow"></span></a>
 							<ul class="list-unstyled">
 								<li><a href="productos.php"> Productos </a></li>
-								<li><a href="proveedores.php"> Proveedores </a></li>
-                                <li><a href="Cliente.php"> Clientes </a></li>
+								<li><a href="stock.php">Stock Bajo</a></li>
 								<li><a href="categorias.php"> Categorias </a></li>
 
 							</ul>
@@ -149,7 +151,7 @@ if($_SESSION['tipo'] == "admin")
                     
 					
                     <li class="submenu">
-						<a href="#"><i class="fa fa-shopping-cart"></i> <span> Ventas </span> <span class="menu-arrow"></span></a>
+						<a href="#"><i class="fas fa-utensils"></i> <span> Ventas </span> <span class="menu-arrow"></span></a>
                             <ul class="list-unstyled">
                                 <li><a href="genera_venta.php">Generar Venta</a></li>
                                 <li><a href="marcar_ventas.php">Ver Ventas</a></li>
@@ -158,9 +160,19 @@ if($_SESSION['tipo'] == "admin")
                             </ul>
                     </li>
                     <li class="submenu">
-						<a href="#"><i class="fa fa-shopping-cart"></i> <span> Informacion </span> <span class="menu-arrow"></span></a>
+						<a href="#"><i class="fas fa-info-circle"></i> <span> Informacion </span> <span class="menu-arrow"></span></a>
                             <ul class="list-unstyled">
-                                <li><a href="stock.php">Stock Bajo</a></li>
+                            <li><a href="proveedores.php"> Proveedores </a></li>
+                                <li><a href="Cliente.php"> Clientes </a></li>
+                                
+                            </ul>
+                    </li>
+                    <li class="submenu">
+						<a href="#"><i class="fa fa-user"></i> <span> Empleados </span> <span class="menu-arrow"></span></a>
+                            <ul class="list-unstyled">
+                                <li><a href="Registro.php">Registro</a></li>
+                                <li><a href="Personal.php">Personal</a></li>
+                                <li><a href="ventas_empleado.php">Ventas</a></li>
                             </ul>
                     </li>
 
@@ -185,7 +197,7 @@ else {
 		<title>Ventas</title>
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="../assets/images/res.ico">
+		<link rel="shortcut icon" href="../assets/images/avatars/res.png">
 
 		<!-- Bootstrap CSS -->
         <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -218,7 +230,8 @@ else {
 
 		<!-- LOGO -->
         <div class="headerbar-left">
-			<a href="inicio.php" class="logo"><img alt="Logo" src="../assets/images/res.png" /> <span>Vendedor</span></a>
+			<a href="inicio.php" class="logo"><img src="../assets/images/dog.png" alt="logo"><span><img src="../assets/images/villa.JPG
+            " alt="logo"></span></a>
         </div>
 
         <nav class="navbar-custom">
@@ -253,7 +266,7 @@ else {
 
                         <li class="list-inline-item dropdown notif">
                             <a class="nav-link dropdown-toggle nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="../assets/images/avatars/res.png" alt="Profile image" class="avatar-rounded">
+                                <img src="../assets/images/avatars/logo.png" alt="Profile image" class="avatar-rounded">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                                 <!-- item-->

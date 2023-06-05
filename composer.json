@@ -1,5 +1,14 @@
-{
+{"autoload": {
+    "classmap": [
+        "clases/"
+    ]
+},
     "require": {
-        "dompdf/dompdf": "^2.0"
+        "dompdf/dompdf": "^2.0",
+        "phpmailer/phpmailer": "^6.5"
+        
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
     }
 }

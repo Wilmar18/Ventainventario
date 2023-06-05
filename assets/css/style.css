@@ -83,7 +83,7 @@ img {
 }
 
 .bg-purple {
-  background-color: #9261c6 !important;
+  background-color: #ffcc27  !important;
 }
 
 .bg-pink {
@@ -370,7 +370,7 @@ a {
 }
 
 .headerbar .headerbar-left {
-  background: #4980b5;
+  background: #e21212;
   float: left;
   text-align: center;
   height: 50px;
@@ -387,7 +387,7 @@ a {
 }
 
 .navbar-custom {
-  background-color: #4980b5;
+  background-color: #eb1e1e;
   border-radius: 0;
   margin-bottom: 0;
   padding: 0 10px;

@@ -34,7 +34,7 @@ class Venta{
             return $r;
             }
                 else{
-                return "not";
+                return 1;
             }
 
         }
@@ -46,7 +46,7 @@ class Venta{
             $result= mysqli_query($conexion,$sql);
             $id=mysqli_fetch_row($result)[0];
 
-              return $id ;
+              return 31 ;
         }
             public function baja_stock($stock,$id)
             {

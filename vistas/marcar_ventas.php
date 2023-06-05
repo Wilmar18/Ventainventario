@@ -7,8 +7,6 @@ if (isset($_SESSION['usuario'])) {
 
 ?>
 
-
-
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
@@ -186,6 +184,7 @@ if (isset($_SESSION['usuario'])) {
 
 
                     </td>
+                    
                     <td>
 
                       <a  href="#" class="btn btn-success" onclick="marcar('<?php echo $fila[0] ?>')">
@@ -195,6 +194,7 @@ if (isset($_SESSION['usuario'])) {
 
 
                     </td>
+                    
                   </tr>
                 <?php
                 } ?>
@@ -249,7 +249,30 @@ if (isset($_SESSION['usuario'])) {
       }
     });
   }
-
+  function enviarfactura($id){
+    $.ajax({
+               type:'post',
+                url:'../procesos/ventas/correo.php',
+                data:datos,
+                success:function(r)
+                {
+                    
+                    if(r==1)
+                        {
+                            alertify.success("Cliente Registrado Correcamente");
+                            table.ajax.reload();
+                        }
+                    else if(r==0)
+                        {
+                            alertify.error("No se pudo registrar");
+                        }
+                    else
+                        {
+                            alert(r);
+                        }
+                }
+            });
+  }
   function agregadatosventa(id) {
     $.ajax({
       type: "POST",

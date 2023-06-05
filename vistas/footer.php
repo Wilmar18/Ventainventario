@@ -14,11 +14,28 @@ if(isset($_SESSION['usuario']))
 
 
 ?>
+
+<style>
+    .footer {
+        background-color: #FFFF00; /* Cambia el color de fondo según tu preferencia */
+        padding: 10px; /* Añade un relleno para separar el contenido del borde del footer */
+    }
+</style>
     <footer class="footer">
 		<span class="text-right">
-		Copyright <a target="_blank" style="color:black">WR</a>
+		Copyright <a target="_blank" style="color:Red">Villa ResDog</a>
 		</span>
-        
+		<div>
+		<span style="margin-right: 30px;">
+            <i class="fa fa-phone "></i> <a target="_blank" style="color:black">324 505 8643 </a>
+        </span>
+		<span>
+		<i class="fa fa-envelope "></i> <a target="_blank" style="color:black">324 505 8643 </a>
+		</span>
+		<span>
+		<i class="fa fa-map-marker "></i> <a target="_blank" style="color:black">Los garzones </a>
+		</span>
+        </div>
 	</footer>
 
 </div>

@@ -49,7 +49,7 @@ class Cliente{
 			$result = mysqli_query($conexion,$sql);
             $ver = mysqli_fetch_row($result);
             $datos = array(
-               "id_proveedor" =>html_entity_decode($ver[0]),
+               "id_cliente" =>html_entity_decode($ver[0]),
                "nombre" =>html_entity_decode($ver[1]),
                "direccion" =>html_entity_decode($ver[2]),
                "telefono" =>html_entity_decode($ver[3]),

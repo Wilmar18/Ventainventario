@@ -151,7 +151,7 @@ if(isset($_POST['txtfecha1']) and isset($_POST['txtfecha2']))
    <table id="dtventas" class="table table-bordered table-hover table-condensed">
                     <thead>
                         <tr>
-                            
+                            <td>Vendedor</td>
                             <td>Cliente</td>
                             <td>Fecha</td>
                             <td>Tipo</td>
@@ -169,6 +169,7 @@ if(isset($_POST['txtfecha1']) and isset($_POST['txtfecha2']))
  ?>
 
     <tr>
+    <td><?php echo $fila[7] ?></td>
 		<td><?php echo $fila[2] ?></td>
 		<td><?php echo $fila[1] ?></td>
 		<td><?php echo $fila[5] ?></td>

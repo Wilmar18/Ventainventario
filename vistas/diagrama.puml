@@ -1,0 +1,53 @@
+@startuml
+
+start
+:El usuario inicia sesión;
+
+if (Usuario autenticado?) then (sí)
+  :Mostrar catálogo de productos;
+  :El usuario selecciona un producto;
+  if (Producto en stock?) then (sí)
+    :Mostrar detalles del producto;
+    :El usuario agrega el producto al carrito;
+    if (El usuario desea seguir comprando?) then (sí)
+      :El usuario selecciona otro producto;
+      repeat
+        :El usuario agrega el producto al carrito;
+        :Mostrar detalles del producto;
+        if (El usuario desea seguir comprando?) then (sí)
+          :El usuario selecciona otro producto;
+        else (no)
+          break;
+        endif
+      repeat while (condición);
+    else (no)
+      break;
+    endif
+  else (no)
+    :Mostrar mensaje de producto agotado;
+  endif
+else (no)
+  :Mostrar mensaje de autenticación incorrecta;
+endif
+
+:El usuario revisa el carrito de compras;
+if (El usuario desea eliminar un producto?) then (sí)
+  :El usuario elimina un producto del carrito;
+else (no)
+  :El usuario procede al pago;
+  :Solicitar información de pago al usuario;
+  if (Información de pago válida?) then (sí)
+    :Realizar transacción de pago;
+    if (Pago exitoso?) then (sí)
+      :Mostrar mensaje de confirmación;
+    else (no)
+      :Mostrar mensaje de error en el pago;
+    endif
+  else (no)
+    :Mostrar mensaje de información de pago inválida;
+  endif
+endif
+
+stop
+
+@enduml
